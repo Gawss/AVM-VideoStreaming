@@ -9,6 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Bb]uild[Rr]eports/
+[Bb]uild[Rr]eports/
+[Bb]uild[Rr]eports.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -25,6 +28,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vsconfig
 
 # Gradle cache directory
 .gradle/
@@ -60,6 +64,7 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+*.DS_Store
 
 # Crashlytics generated file
 crashlytics-build.properties
