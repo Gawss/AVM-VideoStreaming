@@ -9,12 +9,13 @@ public class VideoReceiver : MonoBehaviour
 {
     [SerializeField] private Button startButton;
     [SerializeField] private Button stopButton;
-    [SerializeField] private RawImage remoteVideoImage;
+    [SerializeField] private List<RawImage> remoteVideoImage;
     [SerializeField] private InputField connectionIdInput;
 
     [SerializeField] private SignalingManager renderStreaming;
-    [SerializeField] private SingleConnection connection;
-    [SerializeField] private VideoStreamReceiver receiveVideoViewer;
+    [SerializeField] private StreamConnection connection;
+    [SerializeField] private List<VideoStreamReceiver> receiveVideoViewer;
+
     [SerializeField] private AudioStreamReceiver receiveAudioViewer;
     [SerializeField] private AudioSource remoteAudioSource;
 
@@ -30,7 +31,9 @@ public class VideoReceiver : MonoBehaviour
             connectionIdInput.onValueChanged.AddListener(input => connectionId = input);
 
 
-        receiveVideoViewer.OnUpdateReceiveTexture += OnUpdateReceiveTexture;
+        receiveVideoViewer[0].OnUpdateReceiveTexture += OnUpdateReceiveTexture;
+        receiveVideoViewer[1].OnUpdateReceiveTexture += OnUpdateReceiveTexture1;
+
         receiveAudioViewer.OnUpdateReceiveAudioSource += source =>
         {
             source.loop = true;
@@ -57,7 +60,12 @@ public class VideoReceiver : MonoBehaviour
 
     void OnUpdateReceiveTexture(Texture texture)
     {
-        remoteVideoImage.texture = texture;
+        remoteVideoImage[0].texture = texture;
+    }
+
+    void OnUpdateReceiveTexture1(Texture texture)
+    {
+        remoteVideoImage[1].texture = texture;
     }
 
     private void OnStart()
