@@ -1665,6 +1665,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Point_GrayScale
       objectReference: {fileID: 0}
+    - target: {fileID: 6144776523067858764, guid: 3a7f77aa225ab6043b96d4ea26f85042,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector2f.m_Array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144776523067858764, guid: 3a7f77aa225ab6043b96d4ea26f85042,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector2f.m_Array.Array.data[0].m_Name
+      value: ColorOffset
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144776523067858764, guid: 3a7f77aa225ab6043b96d4ea26f85042,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector2f.m_Array.Array.data[0].m_Value.x
+      value: 73.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144776523067858764, guid: 3a7f77aa225ab6043b96d4ea26f85042,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector2f.m_Array.Array.data[0].m_Value.y
+      value: 79.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6144776523067858764, guid: 3a7f77aa225ab6043b96d4ea26f85042,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector2f.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
