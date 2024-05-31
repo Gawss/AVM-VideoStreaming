@@ -60,12 +60,12 @@ public class VideoReceiver : MonoBehaviour
 
     void OnUpdateReceiveTexture(Texture texture)
     {
-        remoteVideoImage[0].texture = texture;
+        // remoteVideoImage[0].texture = texture;
     }
 
     void OnUpdateReceiveTexture1(Texture texture)
     {
-        remoteVideoImage[1].texture = texture;
+        // remoteVideoImage[1].texture = texture;
     }
 
     private void OnStart()

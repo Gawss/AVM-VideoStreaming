@@ -52,16 +52,16 @@ namespace Akvfx
 
         public int imageHeight;
 
-        // public RenderTexture RT_colorMap;
-        // public RenderTexture RT_positionMap;
+        public RenderTexture RT_colorMap;
+        public RenderTexture RT_positionMap;
 
-        public RawImage IMG_colorMap;
-        public RawImage IMG_positionMap;
+        // public RawImage IMG_colorMap;
+        // public RawImage IMG_positionMap;
 
         public string targetName;
 
         public override bool IsValid(VisualEffect component)
-          => IMG_colorMap != null &&
+          => RT_colorMap != null &&
                 component.HasTexture(_colorMapProperty) &&
                 component.HasTexture(_positionMapProperty) &&
                 component.HasUInt(_widthProperty) &&
@@ -69,10 +69,10 @@ namespace Akvfx
 
         public override void UpdateBinding(VisualEffect component)
         {
-            if (IMG_colorMap == null) return;
-            if (IMG_positionMap == null) return;
-            component.SetTexture(_colorMapProperty, IMG_colorMap.texture);
-            component.SetTexture(_positionMapProperty, IMG_positionMap.texture);
+            if (RT_colorMap == null) return;
+            if (RT_positionMap == null) return;
+            component.SetTexture(_colorMapProperty, RT_colorMap);
+            component.SetTexture(_positionMapProperty, RT_positionMap);
             component.SetUInt(_widthProperty, (uint)imageWidth);
             component.SetUInt(_heightProperty, (uint)imageHeight);
         }
