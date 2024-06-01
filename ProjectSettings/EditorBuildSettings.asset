@@ -5,11 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_WebRTC/Scenes/BroadcastSender.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_WebRTC/Scenes/BroadcastReceiver.unity
+    guid: 4f0723206c6926a4e895e3004a3e6604
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 629ba794576fef8479f08a06941e63d2,
       type: 2}
-    com.unity.renderstreaming.settings: {fileID: 11400000, guid: 79dc40a4a8308134ba6f619ff2a92ced,
+    com.unity.renderstreaming.settings: {fileID: 11400000, guid: b577ff09629558747a03222719e3183a,
       type: 2}

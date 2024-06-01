@@ -51,17 +51,20 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 3
         m_Name: PointSize
         m_Overridden: 1
-      - m_Value: 0.015
+      - m_Value: 0.01
         m_Name: Scale
         m_Overridden: 1
       - m_Value: 1500
         m_Name: DepthScale
         m_Overridden: 1
     m_Vector2f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 73.5, y: 79.8}
+        m_Name: ColorOffset
+        m_Overridden: 1
     m_Vector3f:
       m_Array: []
     m_Vector4f:
