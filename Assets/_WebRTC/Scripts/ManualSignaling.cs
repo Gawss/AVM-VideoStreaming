@@ -7,6 +7,7 @@ using Unity.RenderStreaming;
 using Unity.RenderStreaming.Signaling;
 using Unity.WebRTC;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManualSignaling : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class ManualSignaling : MonoBehaviour
 
     [SerializeField, Tooltip("List of handlers of signaling process.")]
     private List<SignalingHandlerBase> handlers = new List<SignalingHandlerBase>();
+
+    [Header("UI")]
+    [SerializeField] private Text targetText;
 
     // Start is called before the first frame update
     public void StartSession()
@@ -30,6 +34,8 @@ public class ManualSignaling : MonoBehaviour
             i++;
         }
         RTCConfiguration conf = new RTCConfiguration { iceServers = iceServers };
+
+
         ISignaling signaling = CreateSignaling(signalingSettings, SynchronizationContext.Current);
 
         signaling.OnStart += OnStartSignaling;
@@ -42,6 +48,10 @@ public class ManualSignaling : MonoBehaviour
 
         HttpSignaling httpSignaling = signaling as HttpSignaling;
         if (httpSignaling != null) Debug.Log("GOT HTTP");
+
+        targetText.text = httpSignaling.GetSessionId();
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(targetText.transform.parent as RectTransform);
 
 
     }
