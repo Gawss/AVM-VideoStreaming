@@ -57,12 +57,12 @@ VisualEffect:
       - m_Value: 0.01
         m_Name: Scale
         m_Overridden: 1
-      - m_Value: 1500
+      - m_Value: 4500
         m_Name: DepthScale
         m_Overridden: 1
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 73.5, y: 79.8}
+      - m_Value: {x: 0, y: 79.8}
         m_Name: ColorOffset
         m_Overridden: 1
     m_Vector3f:
